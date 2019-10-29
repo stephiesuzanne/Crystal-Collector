@@ -29,7 +29,6 @@ $(document).ready(function() {
 		$("#losses").text(losses);
 		$("#winOrLose").text("");
 
-		//console.log(crystal1Num, crystal2Num, crystal3Num, crystal4Num);
 	}
 
 	function youWin() {
@@ -53,7 +52,7 @@ $(document).ready(function() {
 		$(this).css({opacity: 1});
 	});
 
-	// Function to add the crystal values together
+
 	$(".crystalimg").on("click", function() {
 		if (totalScore >= targetNumber) {
 			return;
