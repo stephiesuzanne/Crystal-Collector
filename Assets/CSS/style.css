@@ -12,6 +12,7 @@ body {
 h3 {
 	margin: 20px 0px 10px 0px;
 	letter-spacing: 3px;
+	color: hotpink;
 }
 
 .header {
@@ -22,14 +23,15 @@ h3 {
 .jumbotron {
     background: url(https://stephiesuzanne.github.io/unit-4-game/Assets/Images/daniele-levis-pelusi-NXt2h4AQZVU-unsplash.jpg) fixed center no-repeat;
     background-size: cover;
-    font-family: Jazz LET, fantasy;
+	font-family: Jazz LET, fantasy;
+	color: hotpink;
     
    }
 h1, h3, #targetNumber, #totalScore, #wins, #losses, .score {
-	color: purple;
+	color:hotpink;
 }
 
-h1 {
+h1, h3 {
 	color: hotpink;
 	margin: 55px 0px 75px 0px;
 	letter-spacing: 12px;
@@ -52,13 +54,14 @@ h1 {
 	font-size: 22px;
 	font-weight: 600;
 	letter-spacing: 3px;
+	color: hotpink;
 }
 
 
 
 .total, .scores, .directions {
 	margin: auto;
-}
+	color: hotpink;
 
 .btn {
 	margin-top: 30px;
