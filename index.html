@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Collecting Crystals</title>
+	<title>Crystals Collector Game</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
@@ -13,74 +13,66 @@
 
 <body>
 
-        <div class="container">
-                <div class="jumbotron text-center">
-                        <h1 style="font-size:10vw">Collecting Crystals</h1>
-                  
-                  <div class="directions">
-                      
-                  <p>You will be given a random number at the start of the game.
-                
-                        There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
-                    
-                        You win the game by matching your total score to the random number, you bust & lose the game if your total score goes above the random number.
-                    
-                       The value of each crystal is hidden from you until you click on it. 
-                    
-                        Each time when the game starts, the game will change the value of each crystal.</p> 
-                </div>
-                </div>
-                </div>
-               
-              </div>
-    
+	<div class="jumbotron text-center">
+		<h1 text-center>CRYSTALS COLLECTOR</h1>
 		
 	</div>
 	
 	<div class="container">
-            <div class="row">
-                    <div class="col-md-12">
-                      <div class="row">
-                        <div class="col-md-3 Crystal1">
-                          <input type="image" class="btn" id="crystal1" src="/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/Crystal1.jpg"></input>
-                        </div>
-                        <div class="col-md-3 Crystal2">
-                          <input type="image" class="btn" id="crystal2" src="/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/Crystal2.jpg"></input>
-                        </div>
-                        <div class="col-md-3 Crystal3">
-                          <input type="image" class="btn" id="crystal3" src="/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/Crystal3.jpg"></input>
-                        </div>
-                        <div class="col-md-3 Crystal4">
-                          <input type="image" class="btn" id="crystal4" src="/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/Crystal4.jpg"></input>
-                        </div>
-                      </div>
-                    </div>
 		
-	
 		
+		<div class="row">
+			<div class="col-lg-12 directions">
+				<p>You will be given a random number at the start of the game.
+
+                        There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                        
+                        You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
+                        
+                        The value of each crystal is hidden from you until you click on it.
+                        
+                        Each time when the game starts, the game will change the values of each crystal.</p>
 			</div>
         </div>
-
-        <div class="randomNumber text-center">
-        <h2>Random Number</h2>
-        <h2 id="randomNumber"></h2>
-
-		<div class="row text-center">
-			<div class="col-lg-4 total">
-				<h3>Total Score:</h3>
-				<h3 id="totalScore"></h3>
-			</div>
-			<div class="col-lg-4 button">
-				<h3 id="winOrLose"></h3>
-				<button type="button" class="btn btn-light btn-lg">Start Again</button>
-			</div>
-			<div class="col-lg-4 scores">
-				<p class="score">Number of Wins: <span id="wins"></span></p> 
-                <p class="score">Number of Losses: <span id="losses"></span></p>
+        
+        <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                    <img class="crystalimg img-responsive" id="crystal1" src="/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/Crystal1.jpg" alt="Crystal 1"/>
                 </div>
-			</div>
-		</div>
-	</div>
-	
-</body>
-</html>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                    <img class="crystalimg img-responsive" id="crystal2" src="/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/Crystal2.jpg" alt="Crystal 2"/>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                    <img class="crystalimg img-responsive" id="crystal3" src="/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/Crystal3.jpg" alt="Crystal 3"/>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                    <img class="crystalimg img-responsive" id="crystal4" src="/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/Crystal4.jpg" alt="Crystal 4"/>
+                </div>
+            </div>
+    
+
+            <div class="row">
+                    <!-- <div class="col-lg-12 directions">
+                        <p>Each crystal has a hidden value that will only be revealed when clicked. With each click, you will add the crystal's value to your total score. You will win the game if your total score matches the magic number, and you will lose if your total score exceeds it. Good luck.</p>
+                    </div>
+                </div> -->
+        
+                <div class="row text-center">
+                    <div class="col-lg-4 total">
+                        <h3>TOTAL SCORE:</h3>
+                        <h3 id="totalScore"></h3>
+                    </div>
+                    <div class="col-lg-4 button">
+                        <h3 id="winOrLose"></h3>
+                        <button type="button" class="btn btn-light btn-lg">PLAY AGAIN</button>
+                    </div>
+                    <div class="col-lg-4 scores">
+                        <p class="score">WINS: <span id="wins"></span></p> 
+                        <p class="score">LOSSES: <span id="losses"></span></p>
+                    </div>
+                </div>
+            </div>
+            
+        </body>
+        </html>
+        

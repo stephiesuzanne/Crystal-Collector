@@ -1,49 +1,45 @@
-//set global variables
 $(document).ready(function() {
-	var randomNumber;
+	var magicNumber;
 	var totalScore = 0;
 	var wins = 0;
 	var losses = 0;
-	var crystalOne;
-	var crystalTwo;
-	var crystalThree;
-	var crystalFour;
+	var crystal1Num;
+	var crystal2Num;
+	var crystal3Num;
+	var crystal4Num;
 
-
-//random numbers for each of the crystals and for the random number
 	function newNumbers() {
-//The random number shown at the start of the game should be between 19 - 120
-        randomNumber = Math.floor(Math.random()*(120-19) + 19);
-//Each crystal should have a random hidden value between 1 - 12
-		crystalOne = Math.ceil(Math.random() * 12);
-		crystalTwo = Math.ceil(Math.random() * 12);
-		crystalThree= Math.ceil(Math.random() * 12);
-		crystalFour = Math.ceil(Math.random() * 12);
+		magicNumber = Math.floor(Math.random() * 110) + 20;
+		crystal1Num = Math.ceil(Math.random() * 12);
+		crystal2Num = Math.ceil(Math.random() * 12);
+		crystal3Num = Math.ceil(Math.random() * 12);
+		crystal4Num = Math.ceil(Math.random() * 12);
 	}
 
 	function newGame() {
 		newNumbers();
 		totalScore = 0;
-		$("#randomNumber").text(randomNumber);
+		$("#magicNumber").text(magicNumber);
 		$("#totalScore").text(totalScore);
-		$("#crystal1").attr("data-crystalvalue", crystalOne);
-		$("#crystal2").attr("data-crystalvalue", crystalTwo);
-		$("#crystal3").attr("data-crystalvalue", crystalThree);
-		$("#crystal4").attr("data-crystalvalue", crystalFour);
+		$("#crystal1").attr("data-crystalvalue", crystal1Num);
+		$("#crystal2").attr("data-crystalvalue", crystal2Num);
+		$("#crystal3").attr("data-crystalvalue", crystal3Num);
+		$("#crystal4").attr("data-crystalvalue", crystal4Num);
 		$("#wins").text(wins);
 		$("#losses").text(losses);
 		$("#winOrLose").text("");
 
+		//console.log(crystal1Num, crystal2Num, crystal3Num, crystal4Num);
 	}
-// creates function for a game win
+
 	function youWin() {
-		$("#winOrLose").text("You Win!");
+		$("#winOrLose").text("YOU WIN!");
 		wins++;
 		$("#wins").text(wins);
 	}
-// creates function for a game loss
+
 	function youLose() {
-		$("#winOrLose").text("You Lose!");
+		$("#winOrLose").text("YOU LOSE");
 		losses++;
 		$("#losses").text(losses);
 	}
@@ -57,9 +53,9 @@ $(document).ready(function() {
 		$(this).css({opacity: 1});
 	});
 
-	
+	// Function to add the crystal values together
 	$(".crystalimg").on("click", function() {
-		if (totalScore >= randomNumber) {
+		if (totalScore >= magicNumber) {
 			return;
 		}
 
@@ -68,9 +64,9 @@ $(document).ready(function() {
 		totalScore += crystalValue;
 		$("#totalScore").text(totalScore);
 
-		if (totalScore === randomNumber) {
+		if (totalScore === magicNumber) {
 			youWin();
-		} else if (totalScore > randomNumber) {
+		} else if (totalScore > magicNumber) {
 			youLose();
 		}
 	});
