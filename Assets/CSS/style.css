@@ -1,0 +1,100 @@
+html {
+	box-sizing: border-box;
+}
+
+body { 
+	min-height: 100vh;
+    background-image: url("Assets/Images/Cystalbackground.jpg");
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+.jumbotron {
+    background-image: url("/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/kali-neri-NyapZuexFaQ-unsplash.jpg");
+    background-size: cover;
+    font-weight: 1000 !important;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: silver;
+    
+  }
+    
+h3 {
+	margin: 20px 0px 10px 0px;
+	letter-spacing: 3px;
+}
+
+.header {
+        padding: 60px;
+        text-align: center;
+        background: white;
+        color: rgb(231, 208, 228);
+        font-size: 30px;
+      }
+      
+
+h1, h3,  {
+	color:turquoise;
+}
+
+#randomNumber, h2 {
+    color: blue;
+}
+#totalScore, #wins, #losses, .score, h3 {
+    color: purple;
+}
+
+h1 {
+	color: hotpink;
+	margin: 55px 0px 75px 0px;
+    letter-spacing: 12px;
+    font-family: Snell Roundhand, cursive;
+    font-size: 40px;
+}
+
+.crystalimg {
+	width: 150px;
+	margin: 30px auto;
+}
+
+.directions {
+    color: hotpink;
+    font-family: Optima, sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    text-align: left;
+    padding: 20px 85px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: silver;
+ }
+
+
+.score {
+	padding-top: 30px;
+	margin-bottom: 0;
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: 3px;
+}
+
+/*.directions {
+	
+}*/
+
+#winOrLose {
+	color: #a182bc;
+}
+
+.total, .scores, .directions {
+	margin: auto;
+}
+
+.btn {
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	color: palevioletred;
+    letter-spacing: 3px;
+    background-color: silver; 
+}
+
+
