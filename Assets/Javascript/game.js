@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var magicNumber;
+	var targetNumber;
 	var totalScore = 0;
 	var wins = 0;
 	var losses = 0;
@@ -9,7 +9,7 @@ $(document).ready(function() {
 	var crystal4Num;
 
 	function newNumbers() {
-		magicNumber = Math.floor(Math.random() * 110) + 20;
+		targetNumber = Math.floor(Math.random() * 102) + 19;
 		crystal1Num = Math.ceil(Math.random() * 12);
 		crystal2Num = Math.ceil(Math.random() * 12);
 		crystal3Num = Math.ceil(Math.random() * 12);
@@ -19,7 +19,7 @@ $(document).ready(function() {
 	function newGame() {
 		newNumbers();
 		totalScore = 0;
-		$("#magicNumber").text(magicNumber);
+		$("#targetNumber").text(targetNumber);
 		$("#totalScore").text(totalScore);
 		$("#crystal1").attr("data-crystalvalue", crystal1Num);
 		$("#crystal2").attr("data-crystalvalue", crystal2Num);
@@ -33,13 +33,13 @@ $(document).ready(function() {
 	}
 
 	function youWin() {
-		$("#winOrLose").text("YOU WIN!");
+		$("#winOrLose").text("Congratulations! You win!");
 		wins++;
 		$("#wins").text(wins);
 	}
 
 	function youLose() {
-		$("#winOrLose").text("YOU LOSE");
+		$("#winOrLose").text("Haha! You Lose!");
 		losses++;
 		$("#losses").text(losses);
 	}
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
 	// Function to add the crystal values together
 	$(".crystalimg").on("click", function() {
-		if (totalScore >= magicNumber) {
+		if (totalScore >= targetNumber) {
 			return;
 		}
 
@@ -64,9 +64,9 @@ $(document).ready(function() {
 		totalScore += crystalValue;
 		$("#totalScore").text(totalScore);
 
-		if (totalScore === magicNumber) {
+		if (totalScore === targetNumber) {
 			youWin();
-		} else if (totalScore > magicNumber) {
+		} else if (totalScore > targetNumber) {
 			youLose();
 		}
 	});

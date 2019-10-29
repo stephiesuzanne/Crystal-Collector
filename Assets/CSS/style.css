@@ -17,20 +17,21 @@ h3 {
 
 .header {
 	padding: 70px 0px 0px 0px;
-    color: grey;
+    color: hotpink;
     
 }
 .jumbotron {
     background: url(/Users/Steph/Desktop/CodingBootCamp/004homework/unit-4-game/Assets/Images/daniele-levis-pelusi-NXt2h4AQZVU-unsplash.jpg) fixed center no-repeat;
     background-size: cover;
     font-family: Jazz LET, fantasy;
+    
    }
-h1, h3, #magicNumber, #totalScore, #wins, #losses, .score {
-	color: #5073aa;
+h1, h3, #targetNumber, #totalScore, #wins, #losses, .score {
+	color: purple;
 }
 
 h1 {
-	color: black;
+	color: hotpink;
 	margin: 55px 0px 75px 0px;
 	letter-spacing: 12px;
 }
@@ -41,7 +42,7 @@ h1 {
 }
 
 .directions {
-	color: grey;
+	color: hotpink;
 	text-align: center;
 	padding: 20px 85px;
 }
@@ -54,13 +55,7 @@ h1 {
 	letter-spacing: 3px;
 }
 
-/*.directions {
-	
-}*/
 
-#winOrLose {
-	color: #a182bc;
-}
 
 .total, .scores, .directions {
 	margin: auto;
@@ -70,7 +65,7 @@ h1 {
 	margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	color: #a182bc;
+	color: hotpink;
 	letter-spacing: 3px;
 }
 
